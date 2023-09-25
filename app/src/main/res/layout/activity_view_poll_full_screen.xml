@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/progressBarContainer"
+
+    android:layout_height="match_parent"
+    tools:context=".Activities.ViewPollFullScreen">
+
+    <ProgressBar
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/progress_bar_horizontal"
+        />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/progressBar"
+        android:id="@+id/profileSection"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/friendsProfile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/placeholder_image" />
+
+
+        <TextView
+            android:layout_toRightOf="@+id/friendsProfile"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/friendName"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shakir Sajad"
+
+            />
+        <TextView
+            android:layout_toRightOf="@+id/friendName"
+            android:layout_gravity="center"
+            android:id="@+id/numberOfPolls"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14 Hr"
+
+            />
+
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+           android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/baseline_close_24"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+android:layout_marginTop="40dp"
+        android:layout_below="@+id/profileSection"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/imagePoll"
+
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+
+        app:cardCornerRadius="10dp">
+
+    <ImageView
+
+        android:background="@drawable/rectangle_bg"
+
+
+
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+
+        android:id="@+id/titleOfPoll"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagePoll"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Who is the most dumb person in our classroom. Choose cearfully 😊😊😊"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+
+           android:layout_below="@+id/titleOfPoll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ProgressBar
+
+                    android:id="@+id/progressBar1"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="90"
+                    android:progressDrawable="@drawable/progress_bar_horizontal" />
+
+                <TextView
+                    android:id="@+id/progressText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/progressBar1"
+                    android:layout_alignBottom="@id/progressBar1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:text="option 1"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:padding="10dp"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_bar_horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/progressText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/progressBar2"
+                    android:layout_alignBottom="@id/progressBar2"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="option 2"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_bar_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/progressText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/progressBar3"
+                        android:layout_alignBottom="@id/progressBar3"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="option 3"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_bar_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/progressText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/progressBar4"
+                        android:layout_alignBottom="@id/progressBar4"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="option 4"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#f1f1f1"/>
+
+
+
+        <LinearLayout
+
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:background="@drawable/rectangle_bg_add_new_poll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/shuffle"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Shuffle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="@drawable/rectangle_bg_add_new_poll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/right"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Next"/>
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+

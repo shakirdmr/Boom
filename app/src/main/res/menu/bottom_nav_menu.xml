@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Polls"
+        android:id="@+id/pollsBottom"
+        android:icon="@drawable/home_selector"/>
+
+    <!--<item android:title="Messages"
+        android:id="@+id/repliesBottom"
+        android:icon="@drawable/messages_selector"/>
+
+    <item android:title="Find"
+        android:id="@+id/findBottom"
+        android:icon="@drawable/find_selector"/>-->
+
+    <item android:title="Settings"
+        android:id="@+id/settings"
+        android:icon="@drawable/setting_selector"/>
+
+
+</menu>

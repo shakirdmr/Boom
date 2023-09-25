@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+      android:layout_marginLeft="10dp"
+        android:background="@drawable/rectangle_text_poll"
+        android:id="@+id/textPollBox"
+        android:layout_width="300px"
+        android:layout_height="300px">
+
+    <TextView
+
+        android:id="@+id/textPoll"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textSize="8sp"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:text="shakir is my name and wjhat is your name"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintBottom_toBottomOf="@+id/textPoll"
+            app:layout_constraintEnd_toEndOf="@+id/textPoll"
+            android:id="@+id/constraintLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+
+
+            <TextView
+                android:id="@+id/numberOfReplies1"
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:background="@drawable/circle"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+
+        android:id="@+id/imagePollBox"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="10dp"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imagePoll"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:background="@drawable/rectangle_text_poll"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintBottom_toBottomOf="@+id/imagePoll"
+                app:layout_constraintEnd_toEndOf="@+id/imagePoll"
+                android:id="@+id/constraintLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+
+
+                <TextView
+                    android:id="@+id/numberOfReplies2"
+                    android:layout_width="70px"
+                    android:layout_height="70px"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="4"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

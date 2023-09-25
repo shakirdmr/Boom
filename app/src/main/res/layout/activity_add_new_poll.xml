@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activities.AddNewPoll">
+
+    <androidx.appcompat.widget.Toolbar
+        android:elevation="5dp"
+        android:background="#fffff9"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:id="@+id/closeActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_close_24"
+            />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Poll"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f1f1f1"/>
+
+    <LinearLayout
+android:background="@drawable/rectangle_bg_add_new_poll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="add title to your Poll"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:inputType="text"
+            android:maxLines="2"
+            android:id="@+id/titleOFPoll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_bg"
+            android:hint="ask question, suggestion etc"
+            android:maxLength="100"
+            android:nextFocusDown="@+id/et1"
+            android:nextFocusForward="@id/et1"
+            android:padding="10dp"
+            android:textColorHint="#a1a1a1" />
+
+
+        <ImageView
+            android:id="@+id/imageView_addfeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/baseline_add_a_photo_24" />
+
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/squircleCardView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+
+                android:id="@+id/imageView_showAddedImage"
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                android:layout_gravity="right"
+                android:background="@drawable/rectangle_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image"
+                android:visibility="gone" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="write options"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="option 1  🥰"
+                android:nextFocusForward="@id/et2"
+                android:nextFocusDown="@id/et2"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:textColorHint="#a1a1a1" />
+
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="option 2 🔥"
+                android:maxLength="100"
+                android:nextFocusDown="@id/et3"
+                android:nextFocusForward="@id/et3"
+                android:padding="10dp"
+                android:textColorHint="#a1a1a1" />
+
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="option 3 (optional)"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:textColorHint="#a1a1a1"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/et4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="option 4 (optional)"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:textColorHint="#a1a1a1"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/sendMyPoll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:drawableEnd="@drawable/baseline_addchart_24"
+            android:text="Send"
+            android:textAllCaps="false"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

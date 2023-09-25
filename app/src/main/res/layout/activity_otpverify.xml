@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical"
+    tools:context=".Activities.PhoneVerify_Activity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+        <TextView
+            android:id="@+id/givenPhone"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify +91 6006 760328"/>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the OTP we sent to your mobile number"/>
+
+
+
+        <EditText
+            android:textSize="25sp"
+            android:id="@+id/SixDigitOTP"
+            android:layout_marginBottom="10dp"
+            android:maxLength="6"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rectangle_bg"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="type your OTP"/>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/verifyOTP"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        android:backgroundTint="@color/aqua"
+        android:text="verify" />
+    </LinearLayout>
+
+
+</RelativeLayout>

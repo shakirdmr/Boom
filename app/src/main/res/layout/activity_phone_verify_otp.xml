@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical"
+    tools:context=".Activities.PhoneVerify_Activity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+    <TextView
+        android:layout_marginBottom="20dp"
+       android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify Your Phone Number"/>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your country code and phone number and we will send you an OTP on that number to verify your number"/>
+
+
+     <EditText
+
+
+         android:textSize="25sp"
+         android:id="@+id/phoneNumber"
+         android:layout_marginBottom="10dp"
+         android:maxLength="10"
+         android:inputType="phone"
+         android:padding="10dp"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:background="@drawable/rectangle_bg"
+         android:gravity="center"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="type phone number"/>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/continueToOTPVerify"
+    android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        android:backgroundTint="@color/aqua"
+        android:text="continue" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>

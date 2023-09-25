@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Fragments.polls">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="Polls"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_expand_more_24"/>
+
+            <androidx.appcompat.widget.SearchView
+                 android:layout_below="@+id/Title"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:background="@drawable/rectangle_search"
+                android:id="@+id/SearchBox"
+                app:iconifiedByDefault="false"
+                android:clickable="true"
+                app:queryBackground="@android:color/transparent"
+                app:defaultQueryHint="Search "
+                android:layout_width="match_parent"
+                android:layout_height="85px"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:id="@+id/swipeRefresh"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:id="@+id/myPolls_linear"
+                android:layout_below="@+id/swipeRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/squircleCardView"
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    app:cardCornerRadius="10dp"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:id="@+id/addNewPoll"
+                        android:layout_width="300px"
+                        android:layout_height="300px">
+
+
+
+                        <ImageView
+                            android:background="@drawable/rectangle_text_poll"
+                            android:id="@+id/imageView"
+                            android:layout_width="300px"
+                            android:scaleType="centerCrop"
+                            android:layout_height="300px"
+                            android:alpha="0.8"
+                            android:src="@drawable/placeholder_image" />
+
+                        <ImageView
+                            android:elevation="10dp"
+                            android:padding="3dp"
+                            android:background="@drawable/circle"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+
+                            android:src="@drawable/baseline_add_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ProgressBar
+                    android:layout_toRightOf="@+id/squircleCardView"
+                    android:layout_marginLeft="300px"
+                    android:layout_marginTop="100px"
+                    android:id="@+id/progressBarMyPolls"
+                    android:layout_width="100px"
+                    android:layout_height="100px"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/squircleCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300px"
+                    app:spanCount="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/my_polls_modal"
+                    android:id="@+id/myPolls"/>
+            </RelativeLayout>
+            </HorizontalScrollView>
+
+
+            <LinearLayout
+
+                android:padding="10dp"
+
+
+                android:id="@+id/chooseWhoToShowOnPolls"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/myPolls_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+
+               android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose whose polls to see"/>
+
+                <ImageView
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/myPolls_linear"
+                    android:layout_width="55px"
+                    android:layout_height="55px"
+                    android:src="@drawable/baseline_checklist_rtl_24"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
+
+                android:layout_below="@id/chooseWhoToShowOnPolls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:spanCount="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/friends_polls"
+                android:id="@+id/pollsFriends_recycler"/>
+
+
+        </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        app:backgroundTint="#f1f1f1"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+
+</RelativeLayout>
